@@ -19,7 +19,7 @@ WordCounter.prototype.bindEvents = function () {
 };
 
 WordCounter.prototype.wordCount = function (text) {
-  return text.split(' ').length;
+  return text.split(' ').filter(word => (word !== '')).length;
 };
 
 module.exports = WordCounter;
