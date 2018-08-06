@@ -10,6 +10,12 @@ WordCounter.prototype.bindEvents = function () {
     const result = this.wordCount(inputtedText);
     PubSub.publish('WordCounter:result', result);
   });
+
+  PubSub.subscribe('InputView:text-submitted', (evt) => {
+    const submittedText = evt.detail;
+    const result2 = this.wordCount(submittedText);
+    PubSub.publish('WordCounter:result2', result2);
+  });
 };
 
 WordCounter.prototype.wordCount = function (text) {
