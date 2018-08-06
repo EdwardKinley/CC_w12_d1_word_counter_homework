@@ -4,7 +4,7 @@ const ResultView = function () {
 
 };
 
-ResultView.bindEvents = function () {
+ResultView.prototype.bindEvents = function () {
   PubSub.subscribe('WordCounter:result', (evt) => {
     const result = evt.detail;
     this.updateView(result);
@@ -13,7 +13,7 @@ ResultView.bindEvents = function () {
 
 ResultView.prototype.updateView = function (result) {
   const resultElement = document.querySelector('#result');
-  resultElement.textContent = "The number of words is ${result}."
+  resultElement.textContent = `The number of words is ${result}.`
 };
 
 module.exports = ResultView;
