@@ -26,6 +26,8 @@ ResultView.prototype.updateView2 = function (result) {
   const result2Element = document.querySelector('#result2');
   console.log(`The number of submitted words is ${result}.`);
   result2Element.textContent = `The total number of submitted words is ${result}.`
+  const resultElement = document.querySelector('#result');
+  resultElement.textContent = ``
 };
 
 module.exports = ResultView;
