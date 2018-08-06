@@ -1,0 +1,7 @@
+body, input {
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  background-color: gold;
+  font-size: 2rem;
+  border: 10px solid black;
+}
